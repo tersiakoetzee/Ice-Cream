@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="iceCream">
+
+        
+        {{#each iceCreamChoice}}
+         <tr>
+        <td>Container:{{container}}</td>
+        <td>Flavor:{{flavor}}</td>
+        <td>Topping:{{topping}}</td>
+        <td>Total:{{price}}</td>
+         </tr>
+    {{/each}}
+
+  </script>
+</head>
+<body>
+    <div class="iceCreamContainer">
+        <h3>Container</h3>
+        <select class="iceContainer">
+            <option class="plainCone" value="R10.00">Plain Cone</option>
+            <option class="sugarCone" value="R20.00">Sugar Cone</option>
+            <option class="paperCup" value="R5">Paper cup</option>
+        </select>
+        <h3>Flavor</h3>
+        <select  class="iceFlavor">
+            <option class="chocolate" value="R10">Chocolate</option>
+            <option class="vanilla" value="R10">Vanilla</option>
+            <option class="caramel" value="R10">Caramel</option>
+        </select>
+       <!-- <form class="toppings"> -->
+                <h3>Topping</h3>
+                <input type="checkbox" class="toppings" value="7.00">Caramal dip<br>
+                <input type="checkbox" class="toppings" value="R8.00">Astros<br>
+                <input type="checkbox" class="toppings" value="R8.00">Smarties<br>
+                <input type="checkbox" class="toppings" value="R5.00">Crumbed peanuts<br>
+                <input type="checkbox" class="toppings" value="R8.00">Oreos<br>
+                <input type="checkbox" class="toppings" value="R7.00">Chocolate Dip<br>
+        <!-- </form> -->
+        <button type="button" class="iceCreamBtn">Submit</button>
+    </div>
+    <div class="myFavorite">
+        <div class="Total">R0.00</div>
+    </div>
+    <script src="./js/IceCreamFac.js" charset="utf-8"></script>
+    <script src="./js/IceCreamDom.js" charset="utf-8"></script>
+</body>
+</html>
