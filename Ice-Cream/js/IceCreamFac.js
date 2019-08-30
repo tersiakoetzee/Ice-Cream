@@ -1,23 +1,23 @@
-function IceCreamFactory(){
+function IceCreamFactory() {
     var myIceCream = []
 
-    function mySelection(container,flavor,topping){
-    var iceCreamSelected = {container,flavor,topping}
-    myIceCream.push(iceCreamSelected);
+    function mySelection(container, flavor, topping) {
+        price = Number(container)+ Number(flavor)+ Number(topping);
+        
+        var iceCreamSelected = { container, flavor, topping, price }
+        myIceCream.push(iceCreamSelected);
     }
 
-    function getIceCream(){
+    function getIceCream() {
         return myIceCream
     }
-    function totalCost(){
-        return myIceCream.values;
-    }
+  
 
-   
-    return{
+
+    return {
         mySelection,
         getIceCream,
-        totalCost
     
+
     }
 }
