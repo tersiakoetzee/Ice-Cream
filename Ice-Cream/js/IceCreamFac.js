@@ -2,7 +2,7 @@ function IceCreamFactory() {
     var myIceCream = []
 
     function mySelection(container, flavor, topping) {
-        price = Number(container)+ Number(flavor)+ Number(topping);
+      const  price = Number(container)+ Number(flavor)+ Number(topping);
         
         var iceCreamSelected = { container, flavor, topping, price }
         myIceCream.push(iceCreamSelected);
